@@ -16,12 +16,12 @@ pre {
   font-size: 11px; }
 
 a {
-  color: #000;
+  color: blue;
   &:visited {
-    color: #666; }
+    color: pink; }
   &:hover {
-    color: #fff;
-    background-color: #000; } }
+    color: red;
+    background-color: white; } }
 
 div {
   &.field, &.actions {
