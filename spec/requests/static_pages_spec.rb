@@ -2,24 +2,24 @@ require 'spec_helper'
 
 describe "Static pages" do
 
-  let(:base_title) {"First Development App"}
+  let(:base_title) {"CrowdRenta"}
 
   describe "Home page" do
 
-    it "should have the h1 'asd'" do
+    it "should have the h1 'CrowdRenta'" do
       # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
-      visit '/static_pages/home'
-      page.should have_selector('h1', :text => 'asd' )
+      visit root_path
+      page.should have_selector('h1', :text => 'CrowdRenta' )
     end
 
     it "should have the base title" do
-      visit '/static_pages/home'
-      page.should have_selector('title', :text => "First Development App")
+      visit root_path
+      page.should have_selector('title', :text => "CrowdRenta")
 
     end
 
     it "should not have a custom page title" do
-      visit '/static_pages/home'
+      visit root_path
       page.should_not have_selector('title', :text => '| Home')
     end
   end
@@ -27,17 +27,17 @@ describe "Static pages" do
   describe "Help page" do
 
     it "should have the h1 'Help'" do
-      visit '/static_pages/help'
+      visit help_path
       page.should have_selector('h1', :text => "Help")
     end
 
     it "should have the base title" do
-      visit '/static_pages/help'
-      page.should have_selector('title', :text => "First Development App")
+      visit help_path
+      page.should have_selector('title', :text => "CrowdRenta")
     end
 
     it "should not have a custom page title" do
-      visit '/static_pages/help'
+      visit help_path
       page.should_not have_selector('title', :text => '| Help')
     end
 
@@ -45,16 +45,16 @@ describe "Static pages" do
 
   describe "About page" do
     it "should have the h1 'About Us'" do
-      visit '/static_pages/about'
+      visit about_path
       page.should have_selector('h1', :text => 'About Us')
     end
     it "should have the base title" do
-      visit '/static_pages/about'
-      page.should have_selector('title', :text => "First Development App")
+      visit about_path
+      page.should have_selector('title', :text => "CrowdRenta")
     end
 
     it "should not have a custom page title" do
-      visit '/static_pages/about'
+      visit about_path
       page.should_not have_selector('title', :text => '| About Us')
     end
 
@@ -62,17 +62,17 @@ describe "Static pages" do
 
   describe "Contact page" do
     it "should have the h1 'Contact Us'" do
-      visit "/static_pages/contact"
+      visit contact_path
       page.should have_selector('h1', :text => 'Contact Us')
     end
 
     it "should have the base title" do
-      visit '/static_pages/contact'
-      page.should have_selector('title', :text => "First Development App")
+      visit contact_path
+      page.should have_selector('title', :text => "CrowdRenta")
     end
 
     it "should not have a custom page title" do
-      visit '/static_pages/contact'
+      visit contact_path
       page.should_not have_selector('title', :text => '| Contact Us')
     end
   end
