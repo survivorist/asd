@@ -2,7 +2,12 @@
 
 /* mixins, variables, etc. */
 
-$grayMediumLight: #eaeaea;
+$grayMediumLight: #999;
+$grayLight: #eee;
+$white: #ffffff;
+$black: #000000;
+$blue: #049cdb;
+$red: #9d261d;
 
 /* universal */
 
@@ -29,9 +34,13 @@ textarea {
   }
 }
 a {
-  color: blue;
+  text-decoration: none;
+  color: $blue;
   &hover {
-    color: pink;
+    color: $red;
+  }
+  &visited {
+    color: $blue;
   }
 }
 
@@ -54,7 +63,7 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: $grayLight;
+  color: $grayMediumLight;
 }
 
 p {
@@ -87,13 +96,7 @@ footer {
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid $grayMediumLight;
-  color: $grayLight;
-  a {
-    color: $gray;
-    &:hover {
-      color: $grayDarker;
-    }
-   }
+  color: $grayMediumLight;
   small {
     float: left;
   }
