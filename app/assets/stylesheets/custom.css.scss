@@ -2,6 +2,10 @@
 
 /* mixins, variables, etc. */
 
+$LinkColor: #049cdb;
+$LinkColorHover: #7a43b6;
+$grayLight: #999;
+
 /* universal */
 
 html {
@@ -26,8 +30,12 @@ textarea {
     margin-bottom: 10px;
   }
 }
-
 a {
+  color: #049cdb	;
+  text-decoration: none;
+}
+a:hover {
+  color: $LinkColorHover;
   text-decoration: none;
 }
 /* typography */
