@@ -2,7 +2,9 @@
 
 /* mixins, variables, etc. */
 
-$grayMediumLight: #eaeaea;
+$LinkColor: #049cdb;
+$LinkColorHover: #7a43b6;
+$grayLight: #999;
 
 /* universal */
 
@@ -29,12 +31,13 @@ textarea {
   }
 }
 a {
-  color: blue;
-  &hover {
-    color: pink;
-  }
+  color: #049cdb	;
+  text-decoration: none;
 }
-
+a:hover {
+  color: $LinkColorHover;
+  text-decoration: none;
+}
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
@@ -86,14 +89,12 @@ p {
 footer {
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid $grayMediumLight;
-  color: $grayLight;
-  a {
-    color: $gray;
-    &:hover {
-      color: $grayDarker;
-    }
-   }
+  border-top: 1px solid $grayLight;
+  color: $blue;
+  &:hover {
+    text-decoration: none;
+  }
+
   small {
     float: left;
   }
