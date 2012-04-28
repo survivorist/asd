@@ -2,8 +2,6 @@
 
 /* mixins, variables, etc. */
 
-$grayMediumLight: #eaeaea;
-
 /* universal */
 
 html {
@@ -28,13 +26,10 @@ textarea {
     margin-bottom: 10px;
   }
 }
-a {
-  color: blue;
-  &hover {
-    color: pink;
-  }
-}
 
+a {
+  text-decoration: none;
+}
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
@@ -86,14 +81,12 @@ p {
 footer {
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid $grayMediumLight;
-  color: $grayLight;
-  a {
-    color: $gray;
-    &:hover {
-      color: $grayDarker;
-    }
-   }
+  border-top: 1px solid $grayLight;
+  color: $blue;
+  &:hover {
+    text-decoration: none;
+  }
+
   small {
     float: left;
   }
