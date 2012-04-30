@@ -5,6 +5,7 @@
 $LinkColor: #049cdb;
 $LinkColorHover: #7a43b6;
 $grayLight: #999;
+$pink: #c3325f;
 
 /* universal */
 
@@ -70,7 +71,7 @@ p {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: white;
+  color: $pink;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
