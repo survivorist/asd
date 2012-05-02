@@ -20,6 +20,41 @@ describe "UserPages" do
     it  { should have_selector('h1', text: 'Signup') }
     it  { should have_selector('title', text: full_title('Signup')) }
       # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
+  end
+
+  describe "sign up" do
+    before { visit signup_path }
+
+    let(:submit) { "Create my account" }
+
+    describe "with invalid information" do
+      it "should not create a user" do
+        expect { click_button submit }.not_to change(User, :count)
     end
   end
+
+    describe "error messages" do
+
+      before { click_button submit }
+
+      it { should have_selector('title', text: 'Signup') }
+      it { should have_content('error')}
+
+    end
+
+
+    describe "with valid information" do
+      before do
+        fill_in "Name",           with: "Example User"
+        fill_in "Email",          with: "example@example.com"
+        fill_in "Password",       with: "foobar"
+        fill_in "Confirmation",   with: "foobar"
+      end
+
+      it "should create a user" do
+        expect { click_button submit }.to change(User, :count).by(1)
+      end
+    end
+  end
+end
 
